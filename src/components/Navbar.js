@@ -1,27 +1,48 @@
-import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import React, { useState } from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { CgFileDocument } from "react-icons/cg";
+import logo from "../assets/logo.png";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const [hasExpanded, setHasExpanded] = useState(false);
+
+  const collapseHandler = () => {
+    setHasExpanded((prevState) => (prevState ? false : true));
+  };
+
+  const closeOnClickLink = () => {
+    setHasExpanded(false);
+  };
+
   return (
-    <Navbar fixed="top" expand="md">
+    <Navbar expanded={hasExpanded} fixed="top" expand="md" className="navbar">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+        <Navbar.Brand href="#home" className="d-flex">
+          <img src={logo} alt="brand" className="logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={collapseHandler}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
+
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={Link} to="/" onClick={closeOnClickLink}>
+              <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/about" onClick={closeOnClickLink}>
+              <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+            </Nav.Link>
+            <Nav.Link as={Link} to="/resume" onClick={closeOnClickLink}>
+              <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
