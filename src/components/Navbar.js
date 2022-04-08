@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [hasExpanded, setHasExpanded] = useState(false);
+  const [stickyNav, setStickyNav] = useState(false);
 
   const collapseHandler = () => {
     setHasExpanded((prevState) => (prevState ? false : true));
@@ -16,9 +17,29 @@ const NavBar = () => {
   const closeOnClickLink = () => {
     setHasExpanded(false);
   };
+  const scrollHandler = () => {
+    if (window.pageYOffset >= 100) {
+      setStickyNav(true);
+    } else {
+      setStickyNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   return (
-    <Navbar expanded={hasExpanded} fixed="top" expand="md" className="navbar">
+    <Navbar
+      expanded={hasExpanded}
+      fixed="top"
+      expand="md"
+      className={stickyNav ? "sticky" : "navbar"}
+    >
       <Container>
         <Navbar.Brand href="#home" className="d-flex">
           <img src={logo} alt="brand" className="logo" />
