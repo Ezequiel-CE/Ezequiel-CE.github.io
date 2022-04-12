@@ -4,6 +4,7 @@ import AboutCard from "./AboutCard";
 import img from "../../assets/aboutImg.svg";
 import "./About.css";
 import Stack from "./Stack";
+import Tools from "./Tools";
 
 const About = () => {
   return (
@@ -36,6 +37,11 @@ const About = () => {
           <strong>Skillset </strong>
         </h1>
         <Stack />
+
+        <h1 style={{ textAlign: "center" }}>
+          <strong className="purple">Tools</strong> I use
+        </h1>
+        <Tools />
       </Container>
     </Container>
   );

@@ -41,7 +41,7 @@ const NavBar = () => {
       className={stickyNav ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="#home" className="d-flex">
+        <Navbar.Brand as={Link} to="/" className="d-flex">
           <img src={logo} alt="brand" className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle

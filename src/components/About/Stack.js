@@ -6,11 +6,11 @@ import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiMongodb,
   DiPython,
   DiGit,
 } from "react-icons/di";
-import { SiPytorch, SiFirebase, SiNextdotjs } from "react-icons/si";
+import { SiFirebase, SiJest } from "react-icons/si";
+import "./About.css";
 
 const Stack = () => {
   return (
@@ -23,6 +23,9 @@ const Stack = () => {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJest />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiPython />
