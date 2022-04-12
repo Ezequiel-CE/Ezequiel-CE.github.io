@@ -17,15 +17,20 @@ const NavBar = () => {
   const closeOnClickLink = () => {
     setHasExpanded(false);
   };
-  const scrollHandler = () => {
-    if (window.pageYOffset >= 100) {
-      setStickyNav(true);
-    } else {
-      setStickyNav(false);
-    }
+
+  const goToTop = () => {
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
+    const scrollHandler = () => {
+      if (window.pageYOffset >= 100) {
+        setStickyNav(true);
+      } else {
+        setStickyNav(false);
+      }
+    };
+
     window.addEventListener("scroll", scrollHandler);
 
     return () => {
@@ -41,7 +46,7 @@ const NavBar = () => {
       className={stickyNav ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand as={Link} to="/" className="d-flex">
+        <Navbar.Brand as={Link} to="/" className="d-flex" onClick={goToTop}>
           <img src={logo} alt="brand" className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle

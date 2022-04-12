@@ -106,6 +106,7 @@
 
 .section2-container {
   padding-top: 100px;
+  z-index: -1;
 }
 
 @media (max-width: 767px) {
