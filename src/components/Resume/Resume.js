@@ -24,26 +24,24 @@ const Resume = () => {
   }, []);
 
   return (
-    <div>
-      <Container fluid className="resume-section">
-        <Row className="resume">
-          <Document file={curriculum} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
+    <Container fluid className="resume-section">
+      <Row className="resume">
+        <Document file={curriculum}>
+          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+        </Document>
+      </Row>
 
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            className="donwload-btn "
-            variant="primary"
-            href={curriculum}
-            target="_blank"
-          >
-            <AiOutlineDownload /> Download CV
-          </Button>
-        </Row>
-      </Container>
-    </div>
+      <Row style={{ justifyContent: "center" }}>
+        <Button
+          className="donwload-btn "
+          variant="primary"
+          href={curriculum}
+          target="_blank"
+        >
+          <AiOutlineDownload /> Download CV
+        </Button>
+      </Row>
+    </Container>
   );
 };
 

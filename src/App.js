@@ -5,19 +5,21 @@ import Particle from "./components/Particle";
 import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
 import useScrollTop from "./hooks/use-ScrollToTop";
+import Footer from "./components/Footer";
 
 function App() {
   useScrollTop();
 
   return (
     <>
-      <NavBar />
       <Particle />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
+      <Footer />
     </>
   );
 }
