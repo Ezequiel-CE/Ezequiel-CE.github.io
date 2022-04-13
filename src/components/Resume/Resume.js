@@ -34,10 +34,10 @@ const Resume = () => {
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
+            className="donwload-btn "
             variant="primary"
             href={curriculum}
             target="_blank"
-            style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload /> Download CV
           </Button>

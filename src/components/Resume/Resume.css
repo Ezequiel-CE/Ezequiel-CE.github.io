@@ -80,3 +80,13 @@
   background: #fff;
   border: 2px solid #8a49a8;
 }
+
+.donwload-btn {
+  max-width: 250px !important;
+  background-color: #623686 !important;
+  border: none !important;
+}
+
+.donwload-btn:hover {
+  background-color: #6d20c5d7 !important;
+}
