@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
-import avatar from "../../assets/profile.svg";
+// import avatar from "../../assets/profile.svg";
+import avatar from "../../assets/profile.png";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -48,8 +49,8 @@ const HomeSection2 = () => {
               </i>
             </p>
           </Col>
-          <Col md={2} />
-          <Col md={3} className="myAvtar">
+          <Col md={1} />
+          <Col md={4} className="myAvtar">
             <Tilt>
               <img src={avatar} className="img-fluid" alt="avatar" />
             </Tilt>
