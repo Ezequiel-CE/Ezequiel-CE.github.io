@@ -1,4 +1,4 @@
-# Protafolio website
+# Portafolio website
 
 My personal website
 
