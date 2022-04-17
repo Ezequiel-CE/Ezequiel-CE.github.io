@@ -60,15 +60,21 @@ const NavBar = () => {
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" onClick={closeOnClickLink}>
-              <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about" onClick={closeOnClickLink}>
-              <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-            </Nav.Link>
-            <Nav.Link as={Link} to="/resume" onClick={closeOnClickLink}>
-              <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-            </Nav.Link>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/" onClick={closeOnClickLink}>
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/about" onClick={closeOnClickLink}>
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/resume" onClick={closeOnClickLink}>
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

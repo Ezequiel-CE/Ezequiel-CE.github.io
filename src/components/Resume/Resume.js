@@ -4,6 +4,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import "./Resume.css";
 import curriculum from "../../assets/curriculum.pdf";
 import { Document, Page } from "react-pdf";
+
 //fix for the pdf
 import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;

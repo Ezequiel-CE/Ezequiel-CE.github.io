@@ -1,5 +1,5 @@
 import React from "react";
-import TypeWriterEffect from "react-typewriter-effect";
+import Typewriter from "typewriter-effect";
 
 const TypeWriterComponent = () => {
   const text = [
@@ -9,18 +9,13 @@ const TypeWriterComponent = () => {
     "Game developer wannabe",
   ];
   return (
-    <TypeWriterEffect
-      textStyle={{
-        fontFamily: "Raleway",
-        fontSize: "2.2em",
-        color: "#be6adf",
-        fontWeight: "600",
+    <Typewriter
+      options={{
+        strings: text,
+        autoStart: true,
+        loop: true,
+        deleteSpeed: 50,
       }}
-      multiTextLoop
-      startDelay={100}
-      cursorColor="#b562d6"
-      multiText={text}
-      typeSpeed={60}
     />
   );
 };
