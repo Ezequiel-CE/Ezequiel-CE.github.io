@@ -1,6 +1,6 @@
 # Protafolio website
 
-my personal website
+My personal website
 
 ## Built with
 
