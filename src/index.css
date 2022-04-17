@@ -27,3 +27,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(222, 130, 235, 0.911);
 }
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
