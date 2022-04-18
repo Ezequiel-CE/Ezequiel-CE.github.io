@@ -1,7 +1,11 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   max-width: 100%;
-  max-height: 100%;
+  min-height: 100vh;
   font-family: "Raleway", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,5 +34,9 @@ body {
 
 #no-scroll {
   overflow: hidden;
+  height: 100vh;
+}
+
+#scroll {
   height: 100vh;
 }

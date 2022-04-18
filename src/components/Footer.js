@@ -4,7 +4,7 @@ import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 
-function Footer() {
+const Footer = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const year = new Date().getFullYear();
 
@@ -114,6 +114,6 @@ function Footer() {
       <Row>{foorterContent}</Row>
     </Container>
   );
-}
+};
 
 export default Footer;

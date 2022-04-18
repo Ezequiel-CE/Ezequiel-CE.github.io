@@ -3,6 +3,7 @@
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
+  align-self: flex-end !important;
 }
 .footer-copywright {
   text-align: center !important;

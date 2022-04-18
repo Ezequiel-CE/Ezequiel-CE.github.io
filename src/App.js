@@ -12,6 +12,7 @@ import "./index.css";
 
 function App() {
   const [load, setLoad] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoad(false);

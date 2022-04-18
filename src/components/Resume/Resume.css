@@ -90,3 +90,8 @@
 .donwload-btn:hover {
   background-color: #6d20c5d7 !important;
 }
+
+.load {
+  display: grid;
+  align-items: center;
+}
