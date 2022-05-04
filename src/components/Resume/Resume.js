@@ -69,7 +69,7 @@ const Resume = ({ footerEl }) => {
           onLoadSuccess={finishLoadHandler}
           className="d-flex justify-content-center"
         >
-          <Page pageNumber={1} width={width > 786 ? 810 : 350} />
+          <Page pageNumber={1} width={width > 786 ? 800 : 350} />
         </Document>
       </Row>
 
