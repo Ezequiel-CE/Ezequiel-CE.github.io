@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 export const languageSlice = createSlice({
   name: "Language",
   initialState: {
-    language: "ing",
+    currentLanguage: "ing",
   },
   reducers: {
     changeLanguage: (state, action) => {
-      state.language = action.payload;
+      state.currentLanguage = action.payload;
     },
   },
 });
@@ -24,7 +24,6 @@ export const loadSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { changeLanguage } = languageSlice.actions;
 export const { finishLoad } = loadSlice.actions;
 

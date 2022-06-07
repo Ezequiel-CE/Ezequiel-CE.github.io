@@ -1,6 +1,6 @@
 import Preloader from "./Preloader";
 import Particle from "./Particle";
-import NavBar from "./Navbar";
+import NavBar from "./navbar/Navbar";
 import Footer from "./Footer";
 import { useSelector } from "react-redux";
 
