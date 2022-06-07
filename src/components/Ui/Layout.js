@@ -2,8 +2,10 @@ import Preloader from "./Preloader";
 import Particle from "./Particle";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
+import { useSelector } from "react-redux";
 
-const Layout = ({ load, children }) => {
+const Layout = ({ children }) => {
+  const load = useSelector((state) => state.load.load);
   return (
     <div id={load ? "no-scroll" : "scroll"}>
       <Preloader load={load} />

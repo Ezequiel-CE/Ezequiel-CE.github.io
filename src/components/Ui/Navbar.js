@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, ButtonGroup, Button } from "react-bootstrap";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import logo from "../../assets/logo.png";
@@ -74,6 +74,12 @@ const NavBar = () => {
               <Nav.Link as={Link} to="/resume" onClick={closeOnClickLink}>
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <ButtonGroup size="sm" onClick={closeOnClickLink}>
+                <Button className="lenguage-btn">ING</Button>
+                <Button className="lenguage-btn">ESP</Button>
+              </ButtonGroup>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

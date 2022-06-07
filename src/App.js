@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
 import useScrollTop from "./hooks/use-ScrollToTop";
 import Layout from "./components/Ui/Layout";
+import { useDispatch } from "react-redux";
+import { finishLoad } from "./store/slices";
 import "./index.css";
 
 function App() {
-  const [load, setLoad] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoad(false);
+      dispatch(finishLoad());
     }, 1800);
 
     return () => {
       clearTimeout(timer);
     };
-  }, []);
+  }, [dispatch]);
 
   useScrollTop();
 
   return (
-    <Layout load={load}>
+    <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
