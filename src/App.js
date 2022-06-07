@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "./components/Navbar";
+
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Particle from "./components/Particle";
 import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
 import useScrollTop from "./hooks/use-ScrollToTop";
-import Footer from "./components/Footer";
-import Preloader from "./components/Preloader";
+import Layout from "./components/Ui/Layout";
 import "./index.css";
 
 function App() {
@@ -26,18 +24,14 @@ function App() {
   useScrollTop();
 
   return (
-    <div id={load ? "no-scroll" : "scroll"}>
-      <Preloader load={load} />
-      <Particle />
-      <NavBar />
+    <Layout load={load}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 

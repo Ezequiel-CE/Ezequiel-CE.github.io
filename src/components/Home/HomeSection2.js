@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Tilt from "react-parallax-tilt";
 import avatar from "../../assets/profile.png";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -50,9 +49,7 @@ const HomeSection2 = () => {
           </Col>
           <Col md={1} />
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={avatar} className="img-fluid" alt="avatar" />
-            </Tilt>
+            <img src={avatar} className="img-fluid" alt="avatar" />
           </Col>
         </Row>
         <Row>

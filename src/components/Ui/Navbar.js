@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
