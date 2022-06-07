@@ -9,7 +9,16 @@ import {
   DiPython,
   DiGit,
 } from "react-icons/di";
-import { SiFirebase, SiJest } from "react-icons/si";
+
+import {
+  SiFirebase,
+  SiJest,
+  SiNextdotjs,
+  SiExpress,
+  SiStyledcomponents,
+  SiMongodb,
+  SiMaterialui,
+} from "react-icons/si";
 import "./About.css";
 
 const Stack = () => {
@@ -25,16 +34,31 @@ const Stack = () => {
         <DiJavascript1 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <DiReact />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiStyledcomponents />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMaterialui />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiNextdotjs />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiJest />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiPython />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <DiNodejs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <SiExpress />
+      </Col>{" "}
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMongodb />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiFirebase />

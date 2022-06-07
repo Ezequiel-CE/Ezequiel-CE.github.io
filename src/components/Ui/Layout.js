@@ -1,7 +1,7 @@
 import Preloader from "./Preloader";
 import Particle from "./Particle";
 import NavBar from "./navbar/Navbar";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 import { useSelector } from "react-redux";
 
 const Layout = ({ children }) => {
