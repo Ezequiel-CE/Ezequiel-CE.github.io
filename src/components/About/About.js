@@ -1,12 +1,46 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import AboutCard from "./AboutCard";
+import AboutCardIng from "./AboutCardIng";
+import AboutCardEsp from "./AboutCardEsp";
 import img from "../../assets/aboutImg.svg";
 import "./About.css";
 import Stack from "./Stack";
 import Tools from "./Tools";
+import { useSelector } from "react-redux";
 
 const About = () => {
+  const language = useSelector((state) => state.language.currentLanguage);
+
+  let title;
+  let sub;
+  let sub2;
+
+  if (language === "ing") {
+    title = (
+      <h1 className="about-know">
+        Know Who <strong className="purple">I'M</strong>
+      </h1>
+    );
+    sub = <strong>Skillset </strong>;
+    sub2 = (
+      <h1 style={{ textAlign: "center" }}>
+        <strong className="purple">Tools</strong> I use
+      </h1>
+    );
+  } else {
+    title = (
+      <h1 className="about-know">
+        Conoce quien <strong className="purple">SOY</strong>
+      </h1>
+    );
+    sub = <strong>Habilidades </strong>;
+    sub2 = (
+      <h1 style={{ textAlign: "center" }}>
+        <strong className="purple">Herramientas</strong> que uso
+      </h1>
+    );
+  }
+
   return (
     <Container fluid className="about-section">
       <Container>
@@ -19,10 +53,8 @@ const About = () => {
               paddingBottom: "50px",
             }}
           >
-            <h1 className="about-know">
-              Know Who <strong className="purple">I'M</strong>
-            </h1>
-            <AboutCard />
+            {title}
+            {language === "ing" ? <AboutCardIng /> : <AboutCardEsp />}
           </Col>
           <Col md={2} />
           <Col
@@ -33,14 +65,9 @@ const About = () => {
             <img src={img} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 style={{ textAlign: "center" }}>
-          <strong>Skillset </strong>
-        </h1>
+        <h1 style={{ textAlign: "center" }}>{sub}</h1>
         <Stack />
-
-        <h1 style={{ textAlign: "center" }}>
-          <strong className="purple">Tools</strong> I use
-        </h1>
+        {sub2}
         <Tools />
       </Container>
     </Container>

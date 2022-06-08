@@ -4,46 +4,46 @@ import avatar from "../../assets/profile.png";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
-const HomeSection2 = () => {
+const HomeSection2Esp = () => {
   return (
     <Container className="section2-container">
       <Container>
         <Row>
           <Col md={7} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              PERMÍTAME <span className="purple"> PRESENTARME </span>
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              Me enamoré de la programación y he aprendido mucho, creo… 🤷‍♂️
               <br />
-              <br />I am fluent in classics like
+              <br />
+              Soy fluido en clásicos como
               <i>
-                <b className="purple"> Javascript and Python. </b>
+                <b className="purple"> Javascript y Python. </b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new{" "}
+              Mi campo de interés es el desarrollo de{" "}
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Mobile development and Game development.
-                </b>
+                <b className="purple">nuevas tecnologías web y productos </b> ,
+              </i>
+              también en áreas relacionadas con el{" "}
+              <i>
+                <b className="purple">desarrollo móvil y Videojuegos.</b>
               </i>
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              Siempre que puedo, también aplico mi pasión por desarrollar
+              productos con <b className="purple">Node.js</b> y
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  librerías modernas de JavaScript y Frameworks
                 </b>
-              </i>
-              &nbsp; like
+              </i>{" "}
+              como
               <i>
-                <b className="purple"> React.js</b>
+                <b className="purple"> React.js y Next.js</b>
               </i>
             </p>
           </Col>
@@ -54,9 +54,9 @@ const HomeSection2 = () => {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
+            <h1>ENCUÉNTRAME EN</h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+              Siéntete libre de <span className="purple">conectar </span>conmigo
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
@@ -97,4 +97,4 @@ const HomeSection2 = () => {
   );
 };
 
-export default HomeSection2;
+export default HomeSection2Esp;

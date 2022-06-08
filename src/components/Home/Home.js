@@ -1,46 +1,37 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import TypeWriterComponent from "./TypeWriterComponent";
-import homeLogo from "../../assets/homeLogo.svg";
-import "./Home.css";
+import { Container } from "react-bootstrap";
+import HomeSection1 from "./HomeSection1";
+import HomeSection1Esp from "./HomeSection1Esp";
 import HomeSection2 from "./HomeSection2";
+import { useSelector } from "react-redux";
+import HomeSection2Esp from "./HomeSection2Esp";
+import React from "react";
+import "./Home.css";
+
+const HomeEsp = () => {
+  return (
+    <Container className="home-content">
+      <HomeSection1Esp />
+      <HomeSection2Esp />
+    </Container>
+  );
+};
+
+const HomeEng = () => {
+  return (
+    <Container className="home-content">
+      <HomeSection1 />
+      <HomeSection2 />
+    </Container>
+  );
+};
 
 const Home = () => {
+  const language = useSelector((state) => state.language.currentLanguage);
+
   return (
-    <section>
-      <Container fluid id="home">
-        <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 className="heading">
-                Hi There!
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-              </h1>
-              <h1 className="heading-name">
-                I'm{" "}
-                <strong className="main-name">
-                  Carlos Ezequiel Carrizo Escudero
-                </strong>
-              </h1>
-              <div className="type-wrapper">
-                <TypeWriterComponent />
-              </div>
-            </Col>
-            <Col md={5} style={{ paddingBottom: 40 }}>
-              <img
-                src={homeLogo}
-                alt="homepage pic"
-                className="img-fluid logo-home"
-                style={{ maxHeight: "450px" }}
-              />
-            </Col>
-          </Row>
-          <HomeSection2 />
-        </Container>
-      </Container>
-    </section>
+    <Container fluid id="home">
+      {language === "ing" ? <HomeEng /> : <HomeEsp />}
+    </Container>
   );
 };
 

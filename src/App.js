@@ -1,43 +1,38 @@
-import React, { useState, useEffect } from "react";
-import NavBar from "./components/Navbar";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Particle from "./components/Particle";
 import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
 import useScrollTop from "./hooks/use-ScrollToTop";
-import Footer from "./components/Footer";
-import Preloader from "./components/Preloader";
+import Layout from "./components/Ui/Layout";
+import { useDispatch } from "react-redux";
+import { finishLoad } from "./store/slices";
 import "./index.css";
 
 function App() {
-  const [load, setLoad] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoad(false);
+      dispatch(finishLoad());
     }, 1800);
 
     return () => {
       clearTimeout(timer);
     };
-  }, []);
+  }, [dispatch]);
 
   useScrollTop();
 
   return (
-    <div id={load ? "no-scroll" : "scroll"}>
-      <Preloader load={load} />
-      <Particle />
-      <NavBar />
+    <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 
