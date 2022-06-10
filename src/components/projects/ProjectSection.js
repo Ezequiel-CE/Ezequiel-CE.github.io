@@ -4,10 +4,10 @@ import calculator from "../../assets/calculator.png";
 import weather from "../../assets/Weather.png";
 import curriculum from "../../assets/curriculumMK.png";
 import store from "../../assets/store.png";
-
 import poke from "../../assets/poke.png";
 import portafolio from "../../assets/portafolio.png";
 import "./project.css";
+import { useSelector } from "react-redux";
 
 const projectsEng = [
   {
@@ -38,7 +38,7 @@ const projectsEng = [
     title: "Fake store",
     link: "https://github.com/Ezequiel-CE/shopping-cart",
     description:
-      "e-commerce made with reactJs,reactRouter,reactBootstrap and Styled components, that make use of the fake store API to get the products ",
+      "e-commerce made with ReactJs,React Router,React Bootstrap and Styled components, that make use of the fake store API to get the products ",
     img: store,
     done: true,
   },
@@ -46,7 +46,7 @@ const projectsEng = [
     title: "My portafolio",
     link: "https://github.com/Ezequiel-CE/Ezequiel-CE.github.io",
     description:
-      "My personal website,build with Reactjs,reactBootstrap and use redux to hadndle the state of the page.",
+      "My personal website,build with Reactjs,React Bootstrap and use redux to hadndle the state of the page.",
     img: portafolio,
     done: true,
   },
@@ -59,11 +59,63 @@ const projectsEng = [
     done: false,
   },
 ];
+const projectsEsp = [
+  {
+    title: "Js Calculator",
+    link: "https://github.com/Ezequiel-CE/JS-calculator",
+    description:
+      "Uno de mis primeros proyectos, una simple calculadora hecha con vanilla JavaScript, y manipulacion de DOM.",
+    img: calculator,
+    done: true,
+  },
+  {
+    title: "Js Weather app",
+    link: "https://github.com/Ezequiel-CE/weather-app",
+    description:
+      "Este proyecto fur creado con el proposito de aprender a usar una APi con vanilla javascript, en este caso hace uso de la OpenWeatherm API.",
+    img: weather,
+    done: true,
+  },
+  {
+    title: "CV maker",
+    link: "https://github.com/Ezequiel-CE/cv-maker-re",
+    description:
+      "Pagina contruida con ReactJs y materialUI para hacer tu propio curriculum, usa el hook context de react para manejar el state.",
+    img: curriculum,
+    done: true,
+  },
+  {
+    title: "Fake store",
+    link: "https://github.com/Ezequiel-CE/shopping-cart",
+    description:
+      "Comercio virtual hencho con ReactJs,React Router,React Bootstrap and Styled components, que hace uso de la fake store API para obtener los productos. ",
+    img: store,
+    done: true,
+  },
+  {
+    title: "My portafolio",
+    link: "https://github.com/Ezequiel-CE/Ezequiel-CE.github.io",
+    description:
+      "Mi pagina personal, constrida con ReactJs,React Bootstrap y usa redux  para manejar el estado de la pagina.",
+    img: portafolio,
+    done: true,
+  },
+  {
+    title: "Pokemon card shop",
+    link: "#",
+    description:
+      "Tienda de tarjetas Pokemon construida con nextjs,materialUi,Redux, y realiza autenticación con Auth0.  También se podra guardar los usuarios en una base de datos de  mongodb.",
+    img: poke,
+    done: false,
+  },
+];
 
 const ProjectSection = () => {
+  const language = useSelector((state) => state.language.currentLanguage);
+  const projects = language === "ing" ? projectsEng : projectsEsp;
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-      {projectsEng.map((project, i) => (
+      {projects.map((project, i) => (
         <Col key={i} md={4} className="project-card">
           <ProjectCard
             img={project.img}
