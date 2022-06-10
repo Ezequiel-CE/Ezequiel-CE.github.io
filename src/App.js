@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
+import Project from "./components/projects/Project";
 import useScrollTop from "./hooks/use-ScrollToTop";
 import Layout from "./components/Ui/Layout";
 import { useDispatch } from "react-redux";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/projects" element={<Project />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Layout>

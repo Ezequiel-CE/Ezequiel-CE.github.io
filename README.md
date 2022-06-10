@@ -7,5 +7,5 @@ My personal website
 - [React](https://reactjs.org/)
 - [React Bootstrap](https://react-bootstrap.github.io/)
 - [React Router](https://reactrouter.com/)
-- [React-PDF](https://projects.wojtekmaj.pl/react-pdf/)
+- [Redux](https://redux-toolkit.js.org/)
 - [TSparticles](https://github.com/matteobruni/tsparticles#ReactJS)

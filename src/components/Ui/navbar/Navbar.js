@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineUser, AiOutlineProject } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import logo from "../../../assets/logo.png";
 import "./Navbar.css";
@@ -10,6 +10,7 @@ import LanguageBtns from "./LanguageBtns";
 const links = [
   { name: "Home", path: "/", icon: <AiOutlineHome /> },
   { name: "About", path: "/about", icon: <AiOutlineUser /> },
+  { name: "Projects", path: "/projects", icon: <AiOutlineProject /> },
   { name: "Resume", path: "/resume", icon: <CgFileDocument /> },
 ];
 
