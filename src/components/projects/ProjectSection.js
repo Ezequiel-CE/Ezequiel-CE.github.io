@@ -6,6 +6,7 @@ import curriculum from "../../assets/curriculumMK.png";
 import store from "../../assets/store.png";
 import poke from "../../assets/poke.png";
 import portafolio from "../../assets/portafolio.png";
+import StarWars from "../../assets/StarWars.png";
 import "./project.css";
 import { useSelector } from "react-redux";
 
@@ -48,6 +49,14 @@ const projectsEng = [
     description:
       "My personal website,build with Reactjs,React Bootstrap and use redux to hadndle the state of the page.",
     img: portafolio,
+    done: true,
+  },
+  {
+    title: "Star Wars Finder",
+    link: "https://github.com/Ezequiel-CE/Starwars-finder",
+    description:
+      "App to find characters from the Star Wars franchise , using the SWAPI API to fetch the data.Build with React, ReactRouter, MaterialUi, Emotion, Redux.",
+    img: StarWars,
     done: true,
   },
   {
@@ -98,6 +107,14 @@ const projectsEsp = [
     description:
       "Mi pagina personal, constrida con ReactJs,React Bootstrap y usa redux  para manejar el estado de la pagina.",
     img: portafolio,
+    done: true,
+  },
+  {
+    title: "Star Wars Finder",
+    link: "https://github.com/Ezequiel-CE/Starwars-finder",
+    description:
+      "Aplicación para encontrar personajes de la franquicia Star Wars, utilizando la API SWAPI para obtener los datos.Contruida con React, ReactRouter, MaterialUi, Emotion, Redux.",
+    img: StarWars,
     done: true,
   },
   {
