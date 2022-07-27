@@ -3,7 +3,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import "./Resume.css";
 import curriculum from "../../assets/Curriculum.png";
 import { useSelector } from "react-redux";
-import curriculumPdf from "../../assets/Currículumv5.pdf";
+import curriculumPdf from "../../assets/curriculum.pdf";
 
 const Resume = () => {
   const language = useSelector((state) => state.language.currentLanguage);

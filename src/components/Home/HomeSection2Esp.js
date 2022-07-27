@@ -81,7 +81,7 @@ const HomeSection2Esp = () => {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/carlos-carrizo-escudero-b45a42153/"
+                  href="https://www.linkedin.com/in/ezequiel-carrizo-escudero-b45a42153/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"

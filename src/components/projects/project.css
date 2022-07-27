@@ -61,6 +61,14 @@
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  width: 100% !important;
+  height: 220px !important;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: auto !important;
+  }
 }
 
 .blog-img {
