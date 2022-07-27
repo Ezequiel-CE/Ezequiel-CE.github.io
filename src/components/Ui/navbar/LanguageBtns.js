@@ -4,14 +4,14 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { changeLanguage } from "../../../store/slices";
 
-function LanguageBtns() {
+function LanguageBtns({ close }) {
   const dispatcher = useDispatch();
   const language = useSelector((state) => state.language.currentLanguage);
 
   const changeToIng = () => {
     dispatcher(changeLanguage("ing"));
   };
-  const changoToEsp = () => {
+  const changeToEsp = () => {
     dispatcher(changeLanguage("esp"));
   };
 
@@ -21,13 +21,19 @@ function LanguageBtns() {
     <ButtonGroup size="sm">
       <Button
         className={`language-btn ${isEnglish ? "btn-active " : ""}`}
-        onClick={changeToIng}
+        onClick={() => {
+          changeToIng();
+          close();
+        }}
       >
         ENG
       </Button>
       <Button
         className={`language-btn ${isEnglish ? "" : "btn-active"}`}
-        onClick={changoToEsp}
+        onClick={() => {
+          changeToEsp();
+          close();
+        }}
       >
         SPA
       </Button>

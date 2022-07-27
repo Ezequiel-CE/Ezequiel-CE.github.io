@@ -60,7 +60,7 @@ export const projectsEng = [
     title: "Contact CRUD API",
     link: "https://github.com/Ezequiel-CE/contact-CRUD-back",
     description:
-      "Api that lets you interact with a MySQL database to make for creating,deleting,updating and reading contacts. Made with NodeJS,ExpressJS,Sequelize,MySQL,Joi ",
+      "Api that lets you interact with a MySQL database to make for creating,deleting,updating and reading contacts. Made with NodeJS,ExpressJS,Sequelize,MySQL,Joi. ",
     img: Api,
     done: true,
   },
@@ -70,6 +70,14 @@ export const projectsEng = [
     description:
       "The front End for the Contact CRUD API . Made with ReactJS,NextJs,Axios,Formik and Yup. ",
     img: contact,
+    done: true,
+  },
+  {
+    title: "Face detection backend API",
+    link: "https://github.com/Ezequiel-CE/face-detection-api-backend",
+    description:
+      "API that allows us to create users and authenticate them, in order to access protected resources. Made with NodeJS,ExpressJS,Sequelize,MySQL,PassportJs and the clarifai api for the face detection.",
+    img: Api,
     done: true,
   },
 ];
@@ -126,7 +134,7 @@ export const projectsEsp = [
     title: "Contact CRUD API",
     link: "https://github.com/Ezequiel-CE/contact-CRUD-back",
     description:
-      "Api que permite interactuar con una base de datos MySQL para crear, eliminar, actualizar y leer contactos. Hecho con NodeJS, ExpressJS, Sequelize, MySQL, Joi",
+      "Api que permite interactuar con una base de datos MySQL para crear, eliminar, actualizar y leer contactos. Hecho con NodeJS, ExpressJS, Sequelize, MySQL, Joi.",
     img: Api,
     done: true,
   },
@@ -136,6 +144,14 @@ export const projectsEsp = [
     description:
       "El front-end de la Contact CRUD API. Hecho con ReactJS,NextJs,Axios,Formik y Yup.",
     img: contact,
+    done: true,
+  },
+  {
+    title: "Face detection backend API",
+    link: "https://github.com/Ezequiel-CE/face-detection-api-backend",
+    description:
+      "API que nos permite crear usuarios y autenticarlos, para poder acceder a recursos protegidos. Realizado con NodeJS,ExpressJS,Sequelize,MySQL,PassportJs y la api de clarifai para la detección de rostros.",
+    img: Api,
     done: true,
   },
 ];

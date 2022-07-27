@@ -82,7 +82,7 @@ const NavBar = () => {
               </Nav.Item>
             ))}
             <Nav.Item>
-              <LanguageBtns />
+              <LanguageBtns close={closeOnClickLink} />
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

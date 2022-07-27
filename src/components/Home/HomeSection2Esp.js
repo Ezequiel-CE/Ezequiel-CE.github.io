@@ -43,7 +43,7 @@ const HomeSection2Esp = () => {
               </i>{" "}
               como
               <i>
-                <b className="purple"> React.js y Next.js</b>
+                <b className="purple"> ReactJs , NextJs.</b>
               </i>
             </p>
           </Col>

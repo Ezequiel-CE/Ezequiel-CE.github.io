@@ -15,7 +15,7 @@ function ProjectCard({ img, title, description, link, done }) {
       <Card.Img variant="top" src={img} alt="card-img" />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>{description}</Card.Text>
+        <Card.Text>{description}</Card.Text>
         <Button variant="primary" href={link} target="_blank" disabled={!done}>
           <BiLinkExternal />
           {isEnglish ? btntexteng : btntextesp}
