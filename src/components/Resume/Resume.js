@@ -1,7 +1,7 @@
 import { Container, Row, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import "./Resume.css";
-import curriculum from "../../assets/Curriculum.png";
+import curriculum from "../../assets/curriculum.png";
 import { useSelector } from "react-redux";
 import curriculumPdf from "../../assets/curriculum.pdf";
 
