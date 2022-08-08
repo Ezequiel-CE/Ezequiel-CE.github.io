@@ -1,9 +1,11 @@
 import { Container, Row, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import "./Resume.css";
-import curriculum from "../../assets/curriculum.png";
+import curriculum from "../../assets/Curriculum.png";
+import curriculumEng from "../../assets/CurriculumENG.png";
 import { useSelector } from "react-redux";
-import curriculumPdf from "../../assets/curriculum.pdf";
+import curriculumPdf from "../../assets/Curriculum.pdf";
+import curriculumEngPdf from "../../assets/CurriculumENG.pdf";
 
 const Resume = () => {
   const language = useSelector((state) => state.language.currentLanguage);
@@ -24,7 +26,7 @@ const Resume = () => {
     <Container fluid className="resume-section">
       {title}
       <Row className="resume">
-        <img src={curriculum} alt="curriculum" />
+        <img src={isEnglish ? curriculumEng : curriculum} alt="curriculum" />
       </Row>
       <Row
         style={{
@@ -36,7 +38,7 @@ const Resume = () => {
         <Button
           className="donwload-btn "
           variant="primary"
-          href={curriculumPdf}
+          href={isEnglish ? curriculumEngPdf : curriculumPdf}
           target="_blank"
         >
           <AiOutlineDownload />{" "}
